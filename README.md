@@ -4,6 +4,11 @@
 
 ---
 
+## PART 12: Performance Comparison Table
+
+
+---
+
 ## Guide Questions (Student Reflection & Explanation) 
 
 ## A. Model Performance
