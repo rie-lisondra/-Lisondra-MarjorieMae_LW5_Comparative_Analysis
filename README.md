@@ -12,9 +12,9 @@
 | Pre-Trained Model 2 (ResNet50) | 97.87% | 0.1127 | 98.57% | 0.0803 | 0.9831 | 0.9835 | 0.9831 | Excellent | 0.9993 |
 | Pre-Trained Model 3 (EfficientNetB0) | 5.71% | 2.9953 | 5.65% | 2.9956 | 0.0026 | 0.0500 | 0.0050 | Poor | 0.5157 |
 | Model from Teachable Machine | 99.5% | 0.005 | 99.5% | 0.25% | 0.0026 | 0.0026 | 0.0026 | Very Poor | 0.4685 |
-| Your 1st Model | N/A | N/A |  | N/A | 0.0026 |  0.0026 | N/A | N/A |  0.0026 |
-| Your 2nd Model Enhancement | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
-| Your 3rd Model - The Good Model | ResNet50 | Lowest Loss | 98.57% | 0.0803 | 0.9831 | 0.9835 | 0.9831 | Excellent | 0.9993 |
+| Your 1st Model (LW3) | N/A | N/A |  | N/A | 0.0026 |  0.0026 | N/A | N/A |  0.0026 |
+| Your 2nd Model Enhancement (LW4 Initial Model) | 15.9% | N/A | N/A | N/A | 0.02 | 0.07 | 0.03 |  | 0.5210 |
+| Your 3rd Model (LW4 Transfer Model) - The Good Model | 87% | 0.58 | 94% | 0.40 | 0.94 | 0.94 | 0.94 | Excellent | 0.9917 |
 
 ---
 
