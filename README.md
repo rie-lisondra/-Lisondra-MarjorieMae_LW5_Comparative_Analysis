@@ -8,11 +8,11 @@
 
 | Model - Sample | Train Accuracy | Train Loss | Test Accuracy | Test Loss | Precision | Recall | F1-score | ROC | AUC |
 |---|---|---|---|---|---|---|---|---|---|
-| Pre-Trained Model 1 (VGG16) | N/A | N/A | 91.15% | 0.4347 | 0.9126 | 0.9106 | 0.9102 | Excellent | 0.9953 |
-| Pre-Trained Model 2 (ResNet50) | N/A | N/A | 98.57% | 0.0803 | 0.9831 | 0.9835 | 0.9831 | Excellent | 0.9993 |
-| Pre-Trained Model 3 (EfficientNetB0) | N/A | N/A | 5.65% | 2.9956 | 0.0026 | 0.0500 | 0.0050 | Poor | 0.5157 |
-| Model from Teachable Machine | 0.995 | 0.005 | 0.995 | 0.025 | 0.0026 | 0.0026 | 0.0026 | Very Poor | 0.4685 |
-| Your 1st Model | N/A | N/A | 0.25% | N/A | 0.0026 |  0.0026 | N/A | N/A |  0.0026 |
+| Pre-Trained Model 1 (VGG16) | 80.83% | 0.6686 | 91.15% | 0.4347 | 0.9126 | 0.9106 | 0.9102 | Excellent | 0.9953 |
+| Pre-Trained Model 2 (ResNet50) | 97.87% | 0.1127 | 98.57% | 0.0803 | 0.9831 | 0.9835 | 0.9831 | Excellent | 0.9993 |
+| Pre-Trained Model 3 (EfficientNetB0) | 5.71% | 2.9953 | 5.65% | 2.9956 | 0.0026 | 0.0500 | 0.0050 | Poor | 0.5157 |
+| Model from Teachable Machine | 99.5% | 0.005 | 0.995 | 0.25% | 0.0026 | 0.0026 | 0.0026 | Very Poor | 0.4685 |
+| Your 1st Model | N/A | N/A |  | N/A | 0.0026 |  0.0026 | N/A | N/A |  0.0026 |
 | Your 2nd Model Enhancement | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
 | Your 3rd Model - The Good Model | ResNet50 | Lowest Loss | 98.57% | 0.0803 | 0.9831 | 0.9835 | 0.9831 | Excellent | 0.9993 |
 
