@@ -7,7 +7,7 @@
 ## PART 12: Performance Comparison Table
 
 | Model - Sample | Train Accuracy | Train Loss | Test Accuracy | Test Loss | Precision | Recall | F1-score | ROC AUC |
-|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|
 | Pre-Trained Model 1 (VGG16) | 80.83% | 0.6686 | 91.15% | 0.4347 | 0.9126 | 0.9106 | 0.9102 | 0.9953 |
 | Pre-Trained Model 2 (ResNet50) | 97.87% | 0.1127 | 98.57% | 0.0803 | 0.9831 | 0.9835 | 0.9831 | 0.9993 |
 | Pre-Trained Model 3 (EfficientNetB0) | 5.71% | 2.9953 | 5.65% | 2.9956 | 0.0026 | 0.0500 | 0.0050 | 0.5157 |
