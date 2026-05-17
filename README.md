@@ -13,8 +13,8 @@
 | Pre-Trained Model 3 (EfficientNetB0) | 5.71% | 2.9953 | 5.65% | 2.9956 | 0.0026 | 0.0500 | 0.0050 | 0.5157 |
 | Model from Teachable Machine | 99.5% | 0.005 | 99.5% | 0.25% | 0.0026 | 0.0026 | 0.0026 | 0.4685 |
 | Your 1st Model (LW3) | 87.74% | 0.3971 | 91.57% | 0.3438 |  0.9196 |  0.9157 | 0.9161 | 0.9960 |
-| Your 2nd Model Enhancement (LW4 Initial Model) | 15.90% | 3.0552 | 7% | 10.1612 | 0.02 | 0.07 | 0.03 | 0.5210 |
-| Your 3rd Model (LW4 Transfer Model) - The Good Model | 87% | 0.58 | 94% | 0.40 | 0.94 | 0.94 | 0.94 | 0.9917 |
+| Your 2nd Model Enhancement (LW4 Model V2) | 27.41 | 2.2696 | 33.66% | 2.0271 | 0.4211 | 0.3840 | 0.3712 | 0.7359 |
+| Your 3rd Model (LW4 Transfer Model) - The Good Model | 86.80% | 0.6112 | 93.90% | 0.4200 | 0.9401 | 0.9390 | 0.9389 | 0.9906 |
 
 ---
 
