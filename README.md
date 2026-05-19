@@ -8,13 +8,13 @@
 
 | Model - Sample | Train Accuracy | Train Loss | Test Accuracy | Test Loss | Precision | Recall | F1-score | ROC AUC |
 |---|---|---|---|---|---|---|---|---|
-| Pre-Trained Model 1 (VGG16) | 80.83% | 0.6686 | 91.15% | 0.4347 | 0.9126 | 0.9106 | 0.9102 | 0.9953 |
-| Pre-Trained Model 2 (ResNet50) | 97.87% | 0.1127 | 98.57% | 0.0803 | 0.9831 | 0.9835 | 0.9831 | 0.9993 |
-| Pre-Trained Model 3 (EfficientNetB0) | 5.71% | 2.9953 | 5.65% | 2.9956 | 0.0026 | 0.0500 | 0.0050 | 0.5157 |
+| Pre-Trained Model 1 (VGG16) | 80.07% | 0.6751 | 90.81% | 0.4593 | 0.9114 | 0.9087 | 0.9080 | 0.9950 |
+| Pre-Trained Model 2 (ResNet50) | 97.77% | 0.1155 | 98.40% | 0.0714 | 0.9830 | 0.9830 | 0.9828 | 0.9997 |
+| Pre-Trained Model 3 (EfficientNetB0) | 5.27% | 2.9956 | 5.23% | 2.9954 | 0.0025 | 0.0500 | 0.0047 | 0.5674 |
 | Model from Teachable Machine | 99.5% | 0.005 | 99.5% | 0.25% | 0.0026 | 0.0026 | 0.0026 | 0.4685 |
-| Your 1st Model (LW3) | 87.74% | 0.3971 | 91.57% | 0.3438 |  0.9196 |  0.9157 | 0.9161 | 0.9960 |
-| Your 2nd Model Enhancement (LW4 Model V2) | 27.41 | 2.2696 | 33.66% | 2.0271 | 0.4211 | 0.3840 | 0.3712 | 0.7359 |
-| Your 3rd Model (LW4 Transfer Model) - The Good Model | 86.80% | 0.6112 | 93.90% | 0.4200 | 0.9401 | 0.9390 | 0.9389 | 0.9906 |
+| Your 1st Model (LW3) | - | - | 90.89% | - |  0.9141 |  0.9046 | 0.9047 | 0.9956 |
+| Your 2nd Model Enhancement (LW3 Enhanced) | - | - | 70.57% | - | 0.7292 | 0.7047 | 0.7078 | 0.9646 |
+| Your 3rd Model (LW4 Transfer Model) - The Good Model | - | - | 97.13% | - | 0.9721 | 0.9707 | 0.9705 | 0.9994 |
 
 ---
 
