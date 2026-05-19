@@ -24,139 +24,89 @@
 
 ###  1. Which pre-trained model achieved the highest accuracy? Why?
   <div align="justify">
-    The model that achieved the highest accuracy was ResNet50 with a test accuracy of 98.57%. I think this is because ResNet50 has a deeper architecture and uses skip connections or residual blocks. These help solve the vanishing gradient problem and allow the model to learn more complex image features effectively.
+    The pre-trained model that achieved the highest accuracy was ResNet50 with an accuracy of 98.40%. This high performance can be attributed to its deep residual architecture, which enables the model to learn complex botanical features more effectively while minimizing vanishing gradient problems during training.
   </div>
 
 ###   2.  Which model had the lowest performance? What could be the reason?
   <div align="justify">
-    EfficientNetB0 had the lowest performance with only 5.65% test accuracy. This result is unusual because EfficientNetB0 is normally a strong model. A possible reason could be an issue in the implementation, preprocessing mismatch, or instability during training that prevented the model from learning properly.
+    The model with the lowest performance was the Teachable Machine model with only 0.25% accuracy. Among the Keras-trained models, EfficientNetB0 had the lowest performance at 5.23%. This poor performance may have been caused by sensitivity to preprocessing and scaling requirements. In the case of the Teachable Machine model, the results suggest a possible label mapping mismatch or export configuration issue.
   </div>
 
 ###    3. How did loss values compare across models?
    <div align="justify">
-     The loss values matched the accuracy results of the models.
-     <ul>
-       <li>
-         ResNet50 had the lowest test loss of 0.0803, which means it made the most accurate predictions.
-       </li>
-       <li>
-         VGG16 had a test loss of 0.4347, which is higher than ResNet50 but still acceptable.
-       </li>
-       <li>
-         EfficientNetB0 had the highest test loss of 2.9956, showing that it struggled to learn the image patterns.
-       </li>
-     </ul>
+     In terms of loss values, ResNet50 obtained the lowest Test Loss of 0.0714, indicating strong confidence and accurate predictions. VGG16 followed with a Test Loss of 0.4593, while EfficientNetB0 recorded a high Test Loss of 2.9954, showing that it failed to converge toward a reliable solution.
    </div>
   
 ## B. Evaluation Metrics
 ###  4. Why is accuracy not enough to evaluate a model?
   <div align="justify">
-    Accuracy alone is not enough because it can be misleading, especially when the dataset is imbalanced. For example, if most images belong to one class, the model can get high accuracy just by predicting that class every time. Metrics like Precision, Recall, and F1-score give a clearer understanding of the model’s actual performance across all classes.
+   Accuracy alone is not sufficient to evaluate a model because it does not fully reflect the quality of predictions, especially when a model fails to generalize properly. For example, although EfficientNetB0 achieved 5.23% accuracy, its Precision was only 0.0025, indicating that the model was heavily biased toward predicting a single class and could not effectively distinguish among plant species.
   </div>
   
 ###  5. Which model had the best F1-score? What does it indicate?
   <div align="justify"> 
-    ResNet50 achieved the best F1-score with 0.9831. The F1-score is the balance between Precision and Recall. A high F1-score means the model can correctly identify relevant classes while also minimizing false predictions. This shows that ResNet50 is highly reliable and consistent.
+    ResNet50 achieved the best F1-score with a value of 0.9828. This indicates that the model maintained an excellent balance between Precision and Recall, meaning it was both reliable in its predictions and effective at identifying all relevant plant species.
   </div>
 
 ###  6. How did Precision and Recall differ across models?
   <div align="justify"> 
-    <ul>
-      <li>
-        ResNet50 showed excellent Precision (0.9831) and Recall (0.9835), meaning it was very accurate and captured most positive instances correctly.
-      </li>
-      <li>
-        VGG16 also performed well with Precision (0.9126) and Recall (0.9106), although slightly lower than ResNet50.
-      </li>
-      <li>
-        EfficientNetB0 had very poor Precision (0.0026) and Recall (0.0500), which means it failed to classify most classes correctly.
-      </li>
-    </ul>
+    The Precision and Recall values differed significantly across the models. ResNet50 maintained a balanced Precision and Recall of 0.9830, demonstrating consistent classification performance. VGG16 showed slightly lower but still balanced values at approximately 0.91. In contrast, EfficientNetB0 and the Teachable Machine model had Precision and Recall values close to zero, indicating a major failure in generalization and classification capability.
   </div>
 
 ## C. Confusion Matrix Analysis 
 
 ###  7. Which classes were frequently misclassified?
    <div align="justify">
-     Based on the classification report:
-     <ul>
-       <li>
-         For VGG16, classes such as cabomba, hornwort, water_clover, and water_stargrass were more frequently misclassified compared to other classes.
-       </li>
-       <li>
-         For ResNet50, misclassifications were very minimal because most classes had very high precision and recall values.
-       </li>
-       <li>
-         For EfficientNetB0, almost all classes were frequently misclassified, showing that the model failed to properly distinguish the plant species.
-       </li>
-     </ul>
+     Based on the confusion matrix analysis, the class “pickerelweed” was frequently misclassified in the VGG16 model, as shown by its Recall score of only 0.75. Additionally, “water_stargrass” recorded a lower Precision score of 0.80, suggesting confusion with similar aquatic plant species.
   </div>
   
 ###  8. What patterns did you observe in the confusion matrix?
    <div align="justify">
-     <p>For VGG16, there were likely some off-diagonal errors where visually similar plants were confused with each other. </p>
-     <p>For ResNet50, the confusion matrix would mostly show strong diagonal values, meaning the predictions were mostly correct.</p>
-     <p>For EfficientNetB0, the confusion matrix would likely show predictions concentrated in only a few classes, indicating poor generalization and strong prediction bias.</p>
+     The confusion matrix of ResNet50 displayed a very clean diagonal pattern, indicating highly accurate predictions across classes. On the other hand, the VGG16 confusion matrix revealed visible confusion among aquatic plants, particularly between “pickerelweed” and “arrow_arum,” which suggests similarity in their visual features.
   </div>
   
 ## D. ROC and AUC
 ###   9. Which model had the highest AUC score?
    <div align="justify">
-     ResNet50 achieved the highest mean AUC score of 0.9993.
-     <ul>
-       <li>
-         VGG16: 0.9953
-       </li>
-       <li>
-         EfficientNetB0: 0.5157
-       </li>
-     </ul>
+     ResNet50 achieved the highest AUC score with a Mean AUC of 0.9997. This demonstrates the model’s exceptional ability to distinguish between different plant species.
   </div>
 
 ###   10.  What does AUC tell us about model performance?
    <div align="justify"> 
-    AUC or Area Under the Curve measures how well the model can distinguish between classes. A higher AUC means better classification performance across different thresholds. An AUC close to 1.0 indicates an excellent model, while 0.5 means the model performs almost like random guessing. Since ResNet50 had an AUC of 0.9993, it shows that the model can classify the plant species very effectively.
+     The AUC metric measures how effectively a model can separate positive and negative classes. An AUC score of 0.9997 means there is a 99.97% probability that the model will correctly rank a positive plant instance higher than a negative one. This indicates near-perfect classification capability.
   </div>
 
 ## E. Explainability (Grad-CAM)
 ###   11. What did Grad-CAM reveal about model decision-making?
    <div align="justify">
-     Grad-CAM helped visualize which parts of the image the model focused on when making predictions. It showed whether the model was looking at relevant plant features such as leaves, stems, or shapes instead of unrelated background areas.
+     The Grad-CAM analysis revealed that the high-performing models focused on important botanical features such as the textures, shapes, and structures of plant leaves and flowers when making classifications.
   </div>
 
 ###   12.  Did the model focus on relevant image regions? 
    <div align="justify"> 
-     <p>For high-performing models like ResNet50 and VGG16, the heatmaps were likely focused on the important parts of the plants, which means the models were using relevant visual features for classification.</p>
-     <p>For EfficientNetB0, the heatmaps may have been inconsistent or focused on irrelevant regions, which reflects its poor performance.</p>
+     Yes, the models focused on relevant image regions. For both ResNet50 and VGG16, the heatmaps were concentrated on the plant itself instead of the background water, indicating that the models were identifying meaningful visual features related to the target classes.
   </div>
 
 ###   13.  Which model produced the most meaningful heatmaps?
    <div align="justify">
-     ResNet50 produced the most meaningful and focused heatmaps because it had the best overall performance. The highlighted regions were more aligned with the actual plant features, making its predictions easier to interpret.
+     Among all models, ResNet50 produced the most meaningful heatmaps because its highlighted regions were more tightly focused on discriminative botanical characteristics. This observation also aligned with its high confidence levels and superior classification performance.
   </div>
 
 ## F. Model Comparison & Improvement
 ###   14. Which model would you recommend for deployment? Why? 
    <div align="justify">
-     I would recommend deploying ResNet50 because it consistently achieved the best results across all evaluation metrics, including accuracy, loss, F1-score, and AUC. Its performance shows that it is the most reliable and robust model for aquatic plant classification.
+     The model recommended for deployment is ResNet50 because it consistently achieved the highest performance across all evaluation metrics, including Accuracy, Precision, Recall, F1-score, and AUC. In addition, it outperformed the previously developed LW4 “Good Model,” making it the most reliable and robust option for real-world implementation.
   </div>
 
 ###   15.  How can you further improve your best-performing model?
    <div align="justify"> 
-    There are several ways to improve the ResNet50 model further:
-     <ul>
-       <li>Fine-tuning more layers using a lower learning rate to better adapt the model to the dataset.</li>
-       <li>Applying advanced data augmentation techniques such as MixUp, CutMix, or AutoAugment.</li>
-       <li>Performing hyperparameter optimization to find better learning rates, batch sizes, and dropout settings.</li>
-       <li>Using ensemble methods by combining predictions from multiple strong models.</li>
-       <li>Expanding the dataset with more diverse images to improve generalization.</li>
-     </ul>
+    The performance of the best-performing model can still be improved through fine-tuning techniques such as unfreezing selected base layers and retraining them on the dataset. Additional improvements may also come from collecting more diverse and balanced training images, especially for classes like “pickerelweed,” which showed the highest level of confusion during classification.
   </div>
 
 ## G. Real-World Application
 ###   16. How can your model be applied in real-world scenarios?
    <div align="justify">
-     This aquatic plant classification model can be applied in different real-world scenarios such as environmental monitoring, biodiversity assessment, conservation projects, ecological research, and aquaculture management. It can help researchers and environmental agencies quickly identify aquatic plant species, detect invasive plants, and monitor the condition of lakes, rivers, and wetlands. The model can also be integrated into mobile applications so that users can identify plants by simply taking a picture.
+     This model can be applied in different real-world scenarios such as environmental monitoring, biodiversity assessment, conservation projects, ecological research, and aquaculture management. It can help researchers and environmental agencies quickly identify aquatic plant species, detect invasive plants, and monitor the condition of lakes, rivers, and wetlands. The model can also be integrated into mobile applications so that users can identify plants by simply taking a picture.
   </div>
 
 ###   17.   What are the risks of deploying an inaccurate model? 
