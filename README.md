@@ -1,6 +1,7 @@
 # Lisondra-MarjorieMae_LW5_Comparative_Analysis
 
 ###### [Google Collab Link - LW5](https://colab.research.google.com/drive/1AV6cNlVQkdtEW5cPAal8yvzosnJYpJ22?usp=sharing)
+###### [Google Drive Link](https://drive.google.com/drive/folders/1zDuCXYCStvaJEDSeX67QLtF0-zYz3T-e?usp=sharing)
 
 ---
 
